@@ -4,9 +4,9 @@ const myRequest = {
 };
 
 $task.fetch(myRequest).then(response => {
-    let textDecoder = new TextDecoder();
-    let readContent = textDecoder.decode(response.bodyBytes);
-    console.log(readContent);
+    response.bodyBytes.forEach(element => {
+  console.log(element);
+});
     const myStatus = "HTTP/1.1 200 OK";
     const myHeaders = {
         "Content-Type": "text/html; charset=utf-8"
