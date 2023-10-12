@@ -1,9 +1,9 @@
 var modifiedHeaders = $response.headers;
+console.log(modifiedHeaders['Content-Type']);
 
 modifiedHeaders['Content-Type'] = 'text/html; charset=utf-8';
 
-console.log(modifiedHeaders);
-
+console.log(modifiedHeaders['Content-Type']);
 $done({headers : modifiedHeaders});
 
 
