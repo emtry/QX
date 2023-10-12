@@ -5,7 +5,7 @@ const myRequest = {
 
 $task.fetch(myRequest).then(response => {
     var decoder = new TextDecoder('utf8');
-    var b64encoded = btoa(decoder.decode(u8));
+    var b64encoded = btoa(decoder.decode(response.bodyBytes));
     console.log(b64encoded);
     const myStatus = "HTTP/1.1 200 OK";
     const myHeaders = {
